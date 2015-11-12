@@ -27,7 +27,7 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	die;
+    die;
 }
 
 /**
@@ -35,8 +35,8 @@ if ( ! defined( 'WPINC' ) ) {
  * This action is documented in includes/class-giveaways-activator.php
  */
 function activate_giveaways() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-giveaways-activator.php';
-	Giveaways_Activator::activate();
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-giveaways-activator.php';
+    Giveaways_Activator::activate();
 }
 
 /**
@@ -44,8 +44,8 @@ function activate_giveaways() {
  * This action is documented in includes/class-giveaways-deactivator.php
  */
 function deactivate_giveaways() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-giveaways-deactivator.php';
-	Giveaways_Deactivator::deactivate();
+    require_once plugin_dir_path( __FILE__ ) . 'includes/class-giveaways-deactivator.php';
+    Giveaways_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_giveaways' );
@@ -68,8 +68,8 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-giveaways.php';
  */
 function run_giveaways() {
 
-	$plugin = new Giveaways();
-	$plugin->run();
+    $plugin = new Giveaways();
+    $plugin->run();
 
 }
 run_giveaways();
