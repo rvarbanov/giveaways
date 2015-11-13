@@ -102,7 +102,7 @@ class Giveaways_Loader {
      * @param   int     Optional    $accepted_args  The number of arguments that should be passed to the $callback.
      */
     public function add_shortcode( $hook, $component, $callback, $priority = 10, $accepted_args = 1 ) {
-        $this->shortcodes = $this->add( $this->filters, $hook, $component, $callback, $priority, $accepted_args );
+        $this->shortcodes = $this->add( $this->shortcodes, $hook, $component, $callback, $priority, $accepted_args );
     }
 
     /**
@@ -149,7 +149,7 @@ class Giveaways_Loader {
         }
 
         foreach ( $this->shortcodes as $hook ) {
-            add_filter( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['accepted_args'] );
+            add_shortcode( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['accepted_args'] );
         }
 
     }

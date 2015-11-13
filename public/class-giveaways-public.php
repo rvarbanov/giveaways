@@ -100,4 +100,18 @@ class Giveaways_Public {
 
     }
 
+    /**
+     * Processes giveaways shortcode.
+     *
+     * @param   array       $atts   The attributes from the giveaways shortcode.
+     *
+     * @uses    get_option
+     * @uses    get_layout
+     *
+     * @return  mixed   $output     Output of the buffer
+     */
+    public function giveaways_shortcode( $atts ) {
+        return 'this is a test!';
+    }
+
 }
