@@ -14,3 +14,5 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
+
+<p>Hi, This is a test from partials</p>

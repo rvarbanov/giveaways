@@ -111,7 +111,7 @@ class Giveaways_Public {
      * @return  mixed   $output     Output of the buffer
      */
     public function giveaways_shortcode( $atts ) {
-        return 'this is a test!';
+        require_once plugin_dir_path( __FILE__ ). 'partials/giveaways-public-display.php';
     }
 
 }
